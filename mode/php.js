@@ -12778,7 +12778,7 @@ oop.inherits(Mode, HtmlMode);
 (function() {
 
     this.createWorker = function(session) {
-        var worker = new WorkerClient(["ace"], require("ace/mode/php_worker"), "PhpWorker");
+        var worker = new WorkerClient(["ace"], require("../worker/php"), "PhpWorker");
         worker.attachToDocument(session.getDocument());
 
         if (this.inlinePhp)
